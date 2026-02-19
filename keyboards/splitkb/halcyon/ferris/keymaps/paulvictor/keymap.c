@@ -39,37 +39,43 @@ enum custom_keycodes {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [_BASE] = LAYOUT(
+  [_BASE] = LAYOUT_ferris_hlc(
     KC_MINUS, KC_W, LT(_FUNCTIONS,KC_F), KC_P, KC_B,                                 KC_Z, KC_U, KC_Y, KC_Q, KC_QUOTE,
     LGUI_T(KC_A), MT(MOD_LALT, KC_R), KC_S, MT(MOD_LSFT, KC_T),KC_G,         KC_M, MT(MOD_RSFT, KC_N), KC_E, MT(MOD_LALT, KC_I), MT(MOD_RCTL, KC_O),
     TD(CTL_META_X), KC_X, KC_C, LT(_MOUSE,KC_D), KC_V,                                      KC_DOT, KC_H, KC_J, KC_K, KC_L,
-                     LT(_NUM,KC_SPACE), LT(_SYMB,KC_TAB),      LCA_T(KC_ENTER), KC_BSPC
+                               LT(_NUM,KC_SPACE), LT(_SYMB,KC_TAB),      LCA_T(KC_ENTER), KC_BSPC,
+    _______, _______, _______,  _______,  _______,             _______, _______, _______, _______,  _______
   ),
 
-  [_NUM] = LAYOUT(
+  [_NUM] = LAYOUT_ferris_hlc(
     _______, KC_SLASH, KC_BSLS, KC_PIPE, _______,              KC_GRAVE, KC_4, KC_5, KC_6, KC_PLUS,
     KC_LABK, KC_LBRC , KC_RBRC, KC_RABK, _______,              KC_QUES,  KC_1, KC_2, KC_3,    KC_0,
     KC_LCBR, KC_LPRN , KC_RPRN, KC_RCBR, _______,              _______,  KC_7, KC_8, KC_9, KC_EQUAL,
-                                     _______, _______, _______, _______
+                                   _______, _______, _______, _______,
+    _______, _______, _______,  _______,  _______,             _______, _______, _______, _______,  _______
   ),
 
-  [_SYMB] = LAYOUT(
+  [_SYMB] = LAYOUT_ferris_hlc(
     _______, _______, _______, _______, _______,               KC_TILD, KC_DLR, KC_PERC, KC_CIRC, _______,
     _______, _______, _______, _______, _______,               KC_AMPR, KC_EXLM, KC_AT,   KC_HASH, KC_ASTR,
     _______, _______, _______, _______, _______,               _______, KC_LEFT, KC_DOWN, KC_UP  , KC_RIGHT,
-                                  _______, _______, _______, _______
+                                       _______, _______, _______, _______,
+    _______, _______, _______,  _______,  _______,             _______, _______, _______, _______,  _______
+
   ),
-  [_MOUSE] = LAYOUT(
+  [_MOUSE] = LAYOUT_ferris_hlc(
     _______, _______, _______, _______, _______,               _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______,               _______, MS_LEFT, MS_DOWN, MS_UP, MS_RGHT,
     _______, _______, _______, _______, _______,               _______, MS_WHLL, MS_WHLU, MS_WHLD, MS_WHLR,
-                                  _______, _______, MS_BTN1, MS_BTN2
+                                      _______, _______, MS_BTN1, MS_BTN2,
+    _______, _______, _______,  _______,  _______,             _______, _______, _______, _______,  _______
   ),
-  [_FUNCTIONS] = LAYOUT(
+  [_FUNCTIONS] = LAYOUT_ferris_hlc(
     _______, _______, _______, _______, _______,               _______, KC_F4, KC_F5, KC_F6, KC_F12,
     _______, _______, _______, _______, _______,               _______, KC_F1, KC_F2, KC_F3, KC_F11,
     _______, _______, _______, _______, _______,               _______, KC_F7, KC_F8, KC_F9, KC_F10,
-                                 _______, _______, _______, _______
+                                       _______, _______, _______, _______,
+    _______, _______, _______,  _______,  _______,             _______, _______, _______, _______,  _______
   )
 };
 

@@ -233,9 +233,16 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 };
 #endif // defined(ENCODER_ENABLE) && defined(ENCODER_MAP_ENABLE)
 
+#ifdef RGB_MATRIX_ENABLE
+// This function runs once when the keyboard boots up
+void keyboard_post_init_user(void) {
+  // Set the mode to Solid Reactive Wide
+  // Note: Use the enum for the effect to ensure compatibility
+  rgb_matrix_mode(RGB_MATRIX_SOLID_REACTIVE_WIDE);
 
-
-#ifdef OTHER_KEYMAP_C
-#    include OTHER_KEYMAP_C
-#endif // OTHER_KEYMAP_C
-
+  // 2. Set the 'Base' color to Hue: 20, Sat: 160, but Value: 0
+  // This makes the 'background' of the effect pitch black.
+  // Val 80 = Dim
+  rgb_matrix_sethsv(20, 160, 0);
+}
+#endif

@@ -54,3 +54,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DISABLE_LEADER
 
 #define ENCODER_RESOLUTION 2
+
+#ifdef RGB_MATRIX_ENABLE
+
+// Explicitly enable your chosen effect
+  #define ENABLE_RGB_MATRIX_SOLID_REACTIVE_WIDE
+
+// Speed of the "fade out" (lower = faster fade)
+  #define RGB_MATRIX_REACTIVE_SPEED 2
+  #define RGB_DISABLE_WHEN_USB_SUSPENDED // turn off effects when suspended
+#endif

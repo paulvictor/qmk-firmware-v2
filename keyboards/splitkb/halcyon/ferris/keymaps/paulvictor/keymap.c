@@ -249,6 +249,6 @@ void keyboard_post_init_user(void) {
   // 2. Set the 'Base' color to Hue: 20, Sat: 160, but Value: 0
   // This makes the 'background' of the effect pitch black.
   // Val 80 = Dim
-  rgb_matrix_sethsv(20, 160, 0);
+  rgb_matrix_sethsv(20, 160, 80);
 }
 #endif
